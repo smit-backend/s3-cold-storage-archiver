@@ -1,0 +1,28 @@
+{
+    "name": "smit-backend/s3-cold-storage-archiver",
+    "description": "Automated data partitioning and compression pipeline moving historical database partitions into AWS S3 Glacier Deep Archive.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "smit-backend",
+            "email": "sync2sale@gmail.com",
+            "homepage": "https://github.com/smit-backend"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "SmitBackend\\GlacierArchiver\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SmitBackend\\GlacierArchiver\\PackageServiceProvider"
+            ]
+        }
+    }
+}
